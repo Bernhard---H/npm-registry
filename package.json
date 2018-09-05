@@ -1,0 +1,37 @@
+{
+  "name": "@orbit/jsonapi",
+  "version": "0.15.19-queryable.2",
+  "description": "JSON:API support for Orbit.",
+  "contributors": [
+    "Dan Gebhardt <dan@cerebris.com>"
+  ],
+  "keywords": [
+    "orbit",
+    "orbit.js",
+    "JSON:API",
+    "JSONAPI",
+    "API",
+    "REST"
+  ],
+  "repository": "https://github.com/orbitjs/orbit",
+  "license": "MIT",
+  "main": "dist/commonjs/es5/index.js",
+  "module": "dist/modules/es5/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "rm -rf dist && BROCCOLI_ENV=dist broccoli build dist",
+    "build:tests": "rm -rf tests && BROCCOLI_ENV=tests broccoli build tests",
+    "prepublish": "npm run build",
+    "test": "testem ci"
+  },
+  "dependencies": {
+    "@orbit/core": "^0.15.19",
+    "@orbit/data": "^0.15.19",
+    "@orbit/utils": "^0.15.19"
+  },
+  "devDependencies": {
+    "@glimmer/build": "^0.9.0",
+    "sinon": "^1.17.7",
+    "whatwg-fetch": "^2.0.3"
+  }
+}
